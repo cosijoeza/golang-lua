@@ -16,7 +16,7 @@ type Unit struct {
 func main() {
 	L := lua.NewState()
 	defer L.Close()
-	//registerSendMessage(L)
+	registerSendMessage(L)
 	if err := L.DoFile("vehicle.lua"); err != nil {
 		fmt.Println(err)
 	}

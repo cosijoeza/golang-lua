@@ -1,22 +1,37 @@
-table = {
-    a = {
-        "b",
-        "c",
-        d = {
-            "e",
-            "f",
-            g = { "h","i"}
+local table = require 'jsonschema'
+jsonschema = [[{
+    "$schema": "http://json-schema.org/schema#",
+    "name": "Product",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number",
+      },
+      "name": {
+        "type": "string",
+      },
+      "price": {
+        "type": "number",
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
         }
-    },
-    k = {
-        "l",
-        "m"
+      },
+      "stock": {
+        "type": "object",
+        "properties": {
+          "warehouse": {
+            "type": "number"
+          },
+          "retail": {
+            "type": "number"
+          }
+        }
+      }
     }
-}
-table2 = {
-    "cosi",
-    "deborah",
-    "melchor"
-}
-sendTable(table)
-sendTable(table2)
+  }]]
+
+  x = table.tostring(table.fromJsonSchema(jsonschema))
+  print(x)
