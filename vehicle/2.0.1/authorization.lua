@@ -1,6 +1,6 @@
 AuthorizeRequest = {
     -- Optional. The X.509 certificated presented by EV and encoded in PEM format.
-    certificate = "",
+    certificate = "{a:1,b:2,c}",
     -- Required. This contains the identifier that needs to be authorized.
     idToken = IdTokenType,
     -- Optional. Contains the information needed to verify the EV Contract Certificate via OCSP.
@@ -43,7 +43,7 @@ IdTokenEnumType = {
     "macAddress",
     --Transaction is started and no authorization possible. Charging Station only has a start button or mechanical
     --key etc. IdToken field SHALL be left empty.
-    noAuthorization = ""
+    "noAuthorization "
 };
 OCSPRequestDataType = {
     --Required. Used algorithms for the hashes provided.

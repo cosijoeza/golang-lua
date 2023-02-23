@@ -32,6 +32,4 @@ jsonschema = [[{
       }
     }
   }]]
-
-  x = table.tostring(table.fromJsonSchema(jsonschema))
-  print(x)
+print(table.toString(table.fromJsonSchema(jsonschema)))

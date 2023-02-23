@@ -1,0 +1,3 @@
+-- This contains the field definition of the DiagnosticsStatusNotification.conf PDU sent by the Central System to the
+-- Charge Point in response to a DiagnosticsStatusNotification.req PDU. See also Diagnostics Status Notification
+-- No fields are defined.

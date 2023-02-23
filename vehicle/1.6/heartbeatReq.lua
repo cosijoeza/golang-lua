@@ -1,0 +1,3 @@
+-- This contains the field definition of the Heartbeat.req PDU sent by the Charge Point to the Central System. See
+-- also Heartbeat
+-- No fields are defined.
